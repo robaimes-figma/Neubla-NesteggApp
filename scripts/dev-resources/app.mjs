@@ -1,5 +1,15 @@
-import * as figmaJSON from "../../figma.config.json" with { type: "json" };
+import fs from "fs";
 import { devResources } from "./devResources.mjs";
+
+const figmaConfigPath = new URL("../../figma.config.json", import.meta.url);
+if (!fs.existsSync(figmaConfigPath)) {
+  console.error(
+    "figma.config.json not found. Add a Code Connect config before running dev resources sync.",
+  );
+  process.exit(1);
+}
+
+const figmaJSON = JSON.parse(fs.readFileSync(figmaConfigPath, "utf8"));
 
 // run with node --env-file=.env app.mjs
 const TOKEN = process.env.FIGMA_ACCESS_TOKEN;
@@ -17,7 +27,7 @@ const BATCH_SLEEP_MS = 2000;
  * If this becomes untrue, we can store the node ids differently.
  * This approach reuses the existing configuration to reduce complexity.
  */
-const figmaUrls = figmaJSON.default.codeConnect.documentUrlSubstitutions;
+const figmaUrls = figmaJSON.codeConnect.documentUrlSubstitutions;
 
 /**
  * Creating a map of constant keys to node ids. Node ids are being parsed from urls in figma.config.json
