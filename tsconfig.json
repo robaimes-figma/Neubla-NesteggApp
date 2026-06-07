@@ -15,7 +15,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "types": ["@figma/code-connect/figma-types"],
     "baseUrl": "./src",
     "paths": {
       "data": ["./data"],

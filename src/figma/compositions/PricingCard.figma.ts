@@ -26,7 +26,7 @@ if (textPriceNode && textPriceNode.type === 'INSTANCE') {
   price = textPriceNode.getString('Price')
   priceCurrency = textPriceNode.getString('Currency')
   priceLabel = textPriceNode.getString('Label')
-  size = textPriceNode.getEnum('Size', { Large: 'large', Small: 'small' })
+  size = textPriceNode.getEnum('Size', { Large: 'large', Small: 'small' }) ?? 'large'
 }
 
 let actionLabel = ''
@@ -38,7 +38,7 @@ if (buttonNode && buttonNode.type === 'INSTANCE') {
     Primary: 'primary',
     Neutral: 'neutral',
     Subtle: 'subtle',
-  })
+  }) ?? 'primary'
   const iconSwap = buttonNode.getInstanceSwap('Icon End')
   if (iconSwap && iconSwap.type === 'INSTANCE') {
     actionIconCode = iconSwap.executeTemplate().example
