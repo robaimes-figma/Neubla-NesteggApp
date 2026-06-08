@@ -27,5 +27,6 @@
       "utils": ["./ui/utils"]
     }
   },
-  "include": ["src", "scripts"]
+  "include": ["src", "scripts"],
+  "exclude": ["src/figma"]
 }
