@@ -8,6 +8,64 @@
   padding: var(--sds-size-space-400);
 }
 
+.nestegg-auth-shell {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.nestegg-auth-card {
+  background: linear-gradient(
+    180deg,
+    var(--sds-color-background-default-default) 0%,
+    var(--sds-color-background-default-secondary) 100%
+  );
+  border: var(--sds-size-stroke-border) solid var(--sds-color-border-default-default);
+  border-radius: var(--sds-size-radius-500);
+  box-shadow: var(--sds-effects-shadows-drop-shadow-300);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-400);
+  max-width: 480px;
+  padding: var(--sds-size-space-600);
+  width: 100%;
+}
+
+.nestegg-auth-brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-200);
+}
+
+.nestegg-auth-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-200);
+}
+
+.nestegg-auth-google {
+  justify-content: center;
+}
+
+.nestegg-auth-divider {
+  align-items: center;
+  display: grid;
+  gap: var(--sds-size-space-200);
+  grid-template-columns: 1fr auto 1fr;
+}
+
+.nestegg-auth-divider span {
+  border-top: var(--sds-size-stroke-border) solid var(--sds-color-border-default-default);
+  display: block;
+  width: 100%;
+}
+
+.nestegg-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-200);
+}
+
 .nestegg-app {
   background: var(--sds-color-background-default-secondary);
   border: var(--sds-size-stroke-border) solid var(--sds-color-border-default-default);
@@ -80,8 +138,8 @@
 .nestegg-content {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  min-height: 900px;
+  gap: 12px;
+  min-height: 980px;
   padding: 16px;
 }
 
@@ -96,6 +154,12 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.nestegg-dashboard-grid {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .nestegg-chart-card {
   background: var(--sds-color-background-default-default);
   border: var(--sds-size-stroke-border) solid var(--sds-color-border-default-default);
@@ -107,10 +171,146 @@
   padding: 17px;
 }
 
+.nestegg-notification {
+  align-items: center;
+  display: flex;
+  gap: var(--sds-size-space-200);
+  justify-content: space-between;
+}
+
 .nestegg-chart-head {
   align-items: start;
   display: flex;
   justify-content: space-between;
+}
+
+.nestegg-panel {
+  background: var(--sds-color-background-default-default);
+  border: var(--sds-size-stroke-border) solid var(--sds-color-border-default-default);
+  border-radius: 16px;
+  box-shadow: var(--sds-effects-shadows-drop-shadow-200);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 17px;
+}
+
+.nestegg-panel-head {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nestegg-kpi-row {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.nestegg-kpi {
+  align-items: start;
+  background: var(--sds-color-background-default-secondary);
+  border-radius: var(--sds-size-radius-300);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: var(--sds-size-space-200);
+}
+
+.nestegg-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nestegg-list li {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+}
+
+.nestegg-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nestegg-bar-row {
+  align-items: center;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 120px minmax(0, 1fr) 64px;
+}
+
+.nestegg-bar-track {
+  background: var(--sds-color-background-default-secondary);
+  border-radius: var(--sds-size-radius-pill);
+  height: 10px;
+  overflow: hidden;
+}
+
+.nestegg-bar-fill {
+  border-radius: inherit;
+  height: 100%;
+}
+
+.nestegg-list-card-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.nestegg-mini-card {
+  background: var(--sds-color-background-default-secondary);
+  border-radius: var(--sds-size-radius-300);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: var(--sds-size-space-300);
+}
+
+.nestegg-assistant-panel {
+  min-height: 500px;
+}
+
+.nestegg-chat-log {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.nestegg-chat-ai,
+.nestegg-chat-user {
+  align-items: center;
+  border-radius: var(--sds-size-radius-300);
+  display: inline-flex;
+  gap: 8px;
+  margin: 0;
+  max-width: 84%;
+  padding: var(--sds-size-space-200);
+}
+
+.nestegg-chat-ai {
+  background: var(--sds-color-background-default-secondary);
+}
+
+.nestegg-chat-user {
+  align-self: flex-end;
+  background: var(--sds-color-background-brand-default);
+  color: var(--sds-color-text-brand-on-brand);
+}
+
+.nestegg-chat-compose {
+  align-items: end;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: minmax(0, 1fr) auto;
 }
 
 .nestegg-badge {
@@ -181,6 +381,11 @@
   }
 
   .nestegg-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .nestegg-dashboard-grid,
+  .nestegg-list-card-grid {
     grid-template-columns: 1fr;
   }
 }
