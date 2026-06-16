@@ -1,0 +1,186 @@
+.nestegg-shell {
+  background: linear-gradient(
+    180deg,
+    var(--sds-color-background-default-secondary) 0%,
+    var(--sds-color-background-default-secondary-hover) 100%
+  );
+  min-height: calc(100vh - 64px);
+  padding: var(--sds-size-space-400);
+}
+
+.nestegg-app {
+  background: var(--sds-color-background-default-secondary);
+  border: var(--sds-size-stroke-border) solid var(--sds-color-border-default-default);
+  border-radius: var(--sds-size-radius-400);
+  display: grid;
+  height: 723px;
+  grid-template-columns: 240px minmax(0, 1fr);
+  margin: 0 auto;
+  overflow: hidden;
+  width: 1050px;
+}
+
+.nestegg-sidebar {
+  background: var(--sds-color-background-default-default);
+  border-right: var(--sds-size-stroke-border) solid var(--sds-color-border-default-default);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-300);
+  padding: var(--sds-size-space-500) var(--sds-size-space-200);
+}
+
+.nestegg-brand {
+  padding: 0 var(--sds-size-space-100);
+}
+
+.nestegg-subtle {
+  color: var(--sds-color-text-default-secondary);
+  font: var(--sds-font-body-small);
+}
+
+.nestegg-navigation {
+  flex: 1;
+  gap: 2px;
+  min-height: 0;
+}
+
+.nestegg-signout {
+  background: var(--sds-color-gray-900) !important;
+  color: var(--sds-color-white-1000) !important;
+  margin-bottom: var(--sds-size-space-100);
+  margin-top: auto;
+  margin-left: var(--sds-size-space-100);
+  margin-right: var(--sds-size-space-100);
+  width: auto;
+}
+
+.nestegg-main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.nestegg-header {
+  align-items: center;
+  background: var(--sds-color-background-default-default);
+  border-bottom: var(--sds-size-stroke-border) solid var(--sds-color-border-default-default);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 13px;
+}
+
+.nestegg-header-actions {
+  align-items: center;
+  display: flex;
+  gap: var(--sds-size-space-200);
+}
+
+.nestegg-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 900px;
+  padding: 16px;
+}
+
+.nestegg-scroll-region {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.nestegg-stats {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.nestegg-chart-card {
+  background: var(--sds-color-background-default-default);
+  border: var(--sds-size-stroke-border) solid var(--sds-color-border-default-default);
+  border-radius: 16px;
+  box-shadow: var(--sds-effects-shadows-drop-shadow-200);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 17px;
+}
+
+.nestegg-chart-head {
+  align-items: start;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nestegg-badge {
+  background: var(--sds-color-background-positive-tertiary);
+  border-radius: var(--sds-size-radius-pill);
+  color: var(--sds-color-text-positive-default);
+  font: var(--sds-font-body-small-strong);
+  padding: var(--sds-size-space-100) var(--sds-size-space-200);
+}
+
+.nestegg-chart {
+  height: 220px;
+  width: 100%;
+}
+
+.nestegg-grid-line {
+  stroke: var(--sds-color-border-default-default);
+  stroke-dasharray: 5 5;
+}
+
+.nestegg-grid-label {
+  fill: var(--sds-color-text-default-tertiary);
+  font-family: var(--sds-typography-body-font-family);
+  font-size: 11px;
+  text-anchor: end;
+}
+
+.nestegg-chart-foot {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-200);
+}
+
+.nestegg-axis {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding-left: 42px;
+  width: 100%;
+}
+
+.nestegg-legend {
+  display: flex;
+  gap: var(--sds-size-space-300);
+}
+
+.nestegg-legend-item {
+  align-items: center;
+  display: inline-flex;
+  gap: var(--sds-size-space-100);
+}
+
+.nestegg-legend-item i {
+  border-radius: var(--sds-size-radius-pill);
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+}
+
+@media (max-width: 1100px) {
+  .nestegg-app {
+    grid-template-columns: 1fr;
+  }
+
+  .nestegg-sidebar {
+    border-bottom: var(--sds-size-stroke-border) solid var(--sds-color-border-default-default);
+    border-right: 0;
+  }
+
+  .nestegg-stats {
+    grid-template-columns: 1fr;
+  }
+}
